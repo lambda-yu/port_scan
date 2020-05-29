@@ -1,0 +1,12 @@
+server:
+  build: .
+  dockerfile: Dockerfile
+  command: gunicorn --config=gunicorn.conf wsgi_gunicorn:app --log-level=info
+  container_name: PortScanServer
+  ports:
+   - "8080:8000"
+   - "23:22"
+  volumes:
+   - "/home/scan/logs/pyservice_log:/logs/pyservice_log"
+   - "/home/scan/scan_result_data:/scan_result_data"
+   - "/home/scan/JOBS:/port_scan_code/JOBS"

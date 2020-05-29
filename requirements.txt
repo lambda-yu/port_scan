@@ -1,0 +1,9 @@
+Flask==1.1.1
+Flask-APScheduler==1.11.0
+flask-restplus==0.13.0
+Flask-Script==2.0.6
+paramiko==2.7.1
+requests==2.21.0
+uuid==1.30
+gunicorn
+gevent
